@@ -1,0 +1,64 @@
+<%- include('../layouts/header') %>
+<%- include('../layouts/navbar') %>
+
+<!-- Page Header -->
+<header class="bg-primary text-white py-4">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="/" class="text-white text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item"><a href="/products" class="text-white text-decoration-none">Products</a></li>
+                <li class="breadcrumb-item active text-white fw-bold" aria-current="page"><%= product.name %></li>
+            </ol>
+        </nav>
+    </div>
+</header>
+
+<!-- Product Detail Section -->
+<section class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="row g-5">
+            <!-- Product Image Placeholder -->
+            <div class="col-lg-5">
+                <div class="bg-light rounded p-5 d-flex align-items-center justify-content-center border shadow-sm" style="min-height: 400px;">
+                    <i class="bi bi-box-seam text-secondary" style="font-size: 8rem;"></i>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-lg-7">
+                <h1 class="fw-bold mb-3"><%= product.name %></h1>
+                <div class="mb-3 d-flex align-items-center">
+                    <span class="badge bg-primary text-white me-2 px-3 py-2 fs-6">Original Havells</span>
+                    <span class="badge bg-warning text-dark px-3 py-2 fs-6"><%= product.price %></span>
+                </div>
+                
+                <h5 class="fw-bold mt-4 mb-2">Description</h5>
+                <p class="lead text-muted"><%= product.description %></p>
+                
+                <h5 class="fw-bold mt-4 mb-2">Features</h5>
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Genuine company supply</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Wholesale rates available</li>
+                    <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Ready in stock</li>
+                </ul>
+
+                <hr class="my-4">
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="tel:<%= businessInfo.phone %>" class="btn btn-primary btn-lg fw-bold px-4 py-3 shadow-sm">
+                        <i class="bi bi-telephone-fill me-2"></i> Call to Order
+                    </a>
+                    <a href="https://wa.me/91<%= businessInfo.phone.replace(/^0/, '') %>?text=I'm interested in the product: <%= product.name %>" target="_blank" class="btn btn-success btn-lg fw-bold px-4 py-3 shadow-sm">
+                        <i class="bi bi-whatsapp me-2"></i> WhatsApp Inquiry
+                    </a>
+                </div>
+                <div class="mt-3 text-muted small">
+                    <i class="bi bi-info-circle me-1"></i> Bulk order discounts available for contractors and electricians.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('../layouts/footer') %>

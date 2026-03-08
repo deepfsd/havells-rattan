@@ -1,0 +1,75 @@
+<%- include('../layouts/header') %>
+<%- include('../layouts/navbar') %>
+
+<!-- Page Header -->
+<header class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-5 fw-bold">All Products</h1>
+        <p class="lead">Original Havells products directly from the company.</p>
+    </div>
+</header>
+
+<!-- Products Grid -->
+<section class="py-5 bg-white">
+    <div class="container py-4">
+        <!-- Optional Filter Bar Placeholder -->
+        <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+            <h5 class="fw-bold mb-0">Showing <%= products.length %> Products</h5>
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    All Categories
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">All</a></li>
+                    <li><a class="dropdown-item" href="#">Switches</a></li>
+                    <li><a class="dropdown-item" href="#">Wires</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <% products.forEach(product => { %>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border shadow-sm hover-shadow transition">
+                        <!-- Product Image Placeholder -->
+                        <div class="bg-light d-flex align-items-center justify-content-center p-4 border-bottom" style="height: 200px;">
+                            <i class="bi bi-box-seam text-secondary fs-1"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold text-dark mb-2"><%= product.name %></h5>
+                            <p class="card-text text-muted small mb-3"><%= product.description %></p>
+                            <div class="mt-auto">
+                                <span class="badge bg-warning text-dark mb-2 fw-bold px-2 py-1"><%= product.price %></span>
+                                <div class="d-grid gap-2">
+                                    <a href="tel:<%= businessInfo.phone %>" class="btn btn-primary fw-bold"><i class="bi bi-telephone-fill me-2"></i>Call for Price</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-light border-top text-center">
+    <div class="container">
+        <h3 class="fw-bold mb-3">Bulk Order Discounts Available</h3>
+        <p class="text-muted mb-4">Are you a contractor or electrician? Get a custom quote for your project.</p>
+        <a href="/contact" class="btn btn-outline-primary btn-lg fw-bold px-5">Request Quote</a>
+    </div>
+</section>
+
+<style>
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        transition: all 0.3s ease;
+    }
+    .transition {
+        transition: all 0.3s ease;
+    }
+</style>
+
+<%- include('../layouts/footer') %>

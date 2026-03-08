@@ -1,0 +1,86 @@
+{
+  "categories": [
+    {
+      "id": "switches",
+      "name": "Havells Switches",
+      "slug": "havells-switches",
+      "description": "Premium modular switches for homes and offices.",
+      "image": "/images/categories/switches.jpg"
+    },
+    {
+      "id": "wires",
+      "name": "Havells Wires",
+      "slug": "havells-wires",
+      "description": "High-quality, fire-retardant copper wires.",
+      "image": "/images/categories/wires.jpg"
+    },
+    {
+      "id": "mcb",
+      "name": "MCB & Distribution Boards",
+      "slug": "mcb",
+      "description": "Reliable circuit breakers for safety.",
+      "image": "/images/categories/mcb.jpg"
+    },
+    {
+      "id": "lighting",
+      "name": "LED Lighting",
+      "slug": "led-lights",
+      "description": "Energy-efficient LED bulbs, panels, and tubes.",
+      "image": "/images/categories/lighting.jpg"
+    },
+    {
+      "id": "accessories",
+      "name": "Electrical Accessories",
+      "slug": "electrical-accessories",
+      "description": "Essential accessories and fittings.",
+      "image": "/images/categories/accessories.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "switches-1",
+      "categoryId": "switches",
+      "name": "Havells Crabtree Modular Switch",
+      "slug": "havells-crabtree-switch",
+      "description": "Elegant and durable modular switches available in multiple colors.",
+      "image": "/images/products/crabtree-switch.jpg",
+      "price": "Call for Price"
+    },
+    {
+      "id": "wires-1",
+      "categoryId": "wires",
+      "name": "Havells Life Line Plus 1.5 sq mm Wire",
+      "slug": "havells-1-5-sq-mm-wire",
+      "description": "HRFR PVC insulated flexible copper wire (90m).",
+      "image": "/images/products/havells-wire-1.5.jpg",
+      "price": "Call for Price"
+    },
+    {
+      "id": "mcb-1",
+      "categoryId": "mcb",
+      "name": "Havells Euro II Series MCB",
+      "slug": "havells-euro-ii-mcb",
+      "description": "10kA breaking capacity miniature circuit breaker.",
+      "image": "/images/products/havells-mcb.jpg",
+      "price": "Call for Price"
+    },
+    {
+      "id": "lighting-1",
+      "categoryId": "lighting",
+      "name": "Havells 9W LED Bulb",
+      "slug": "havells-9w-led-bulb",
+      "description": "Energy-efficient B22 base LED bulb, Cool Day Light.",
+      "image": "/images/products/havells-9w-bulb.jpg",
+      "price": "Call for Price"
+    },
+    {
+      "id": "accessories-1",
+      "categoryId": "accessories",
+      "name": "Havells Reo Ceiling Fan",
+      "slug": "havells-reo-ceiling-fan",
+      "description": "High-speed ceiling fan with elegant design (1200mm).",
+      "image": "/images/products/havells-reo-fan.jpg",
+      "price": "Call for Price"
+    }
+  ]
+}

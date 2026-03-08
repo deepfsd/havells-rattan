@@ -1,0 +1,52 @@
+<!-- Top Bar -->
+<div class="bg-primary text-white py-2 d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <small><i class="bi bi-clock me-2"></i> Mon - Sat: 9:00 AM - 8:00 PM</small>
+        </div>
+        <div>
+            <a href="tel:<%= businessInfo.phone %>" class="text-white text-decoration-none fw-bold">
+                <i class="bi bi-telephone-fill me-2"></i><%= businessInfo.phone %>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="/">Rattan Electricals</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/categories">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+            <div class="d-lg-none mt-3">
+                <a href="tel:<%= businessInfo.phone %>" class="btn btn-primary w-100">
+                    <i class="bi bi-telephone-fill me-2"></i>Call Now
+                </a>
+            </div>
+            <div class="d-none d-lg-block ms-3">
+                 <a href="tel:<%= businessInfo.phone %>" class="btn btn-outline-primary">Call Now</a>
+            </div>
+        </div>
+    </div>
+</nav>

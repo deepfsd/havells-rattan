@@ -1,0 +1,56 @@
+<%- include('../layouts/header') %>
+<%- include('../layouts/navbar') %>
+
+<!-- Page Header -->
+<header class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-5 fw-bold">Product Categories</h1>
+        <p class="lead">Explore our extensive range of Havells electrical supplies.</p>
+    </div>
+</header>
+
+<!-- Categories Grid -->
+<section class="py-5 bg-light">
+    <div class="container py-4">
+        <div class="row g-4">
+            <% categories.forEach(category => { %>
+                <div class="col-md-6 col-lg-4" id="<%= category.id %>">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                        <!-- Image Placeholder -->
+                        <div class="bg-primary bg-opacity-10 d-flex align-items-center justify-content-center border-bottom" style="height: 250px;">
+                            <i class="bi bi-box text-primary fs-1"></i>
+                            <span class="text-primary ms-2 fs-5 fw-bold"><%= category.name %></span>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold text-dark mb-3"><%= category.name %></h4>
+                            <p class="card-text text-muted"><%= category.description %></p>
+                            <a href="/products?category=<%= category.id %>" class="btn btn-outline-primary mt-auto">View Products <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-white border-top text-center">
+    <div class="container">
+        <h3 class="fw-bold mb-3">Looking for something specific?</h3>
+        <p class="text-muted mb-4">We might have it in stock. Give us a call or request a quote.</p>
+        <a href="tel:<%= businessInfo.phone %>" class="btn btn-primary btn-lg fw-bold"><i class="bi bi-telephone-fill me-2"></i> Call Now</a>
+    </div>
+</section>
+
+<style>
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        transition: all 0.3s ease;
+    }
+    .transition {
+        transition: all 0.3s ease;
+    }
+</style>
+
+<%- include('../layouts/footer') %>
