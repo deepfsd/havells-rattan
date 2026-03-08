@@ -2,7 +2,7 @@
 <%- include('../layouts/navbar') %>
 
 <!-- Hero Section -->
-<header class="bg-primary text-white py-5">
+<header class="bg-danger text-white py-5">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
@@ -23,7 +23,7 @@
             <div class="col-lg-6 text-center">
                 <!-- Placeholder for Hero Image -->
                 <div class="bg-white rounded p-4 shadow-lg ms-lg-5" style="height: 350px; display: flex; align-items: center; justify-content: center;">
-                    <i class="bi bi-lightning-charge text-primary opacity-25" style="font-size: 8rem;"></i>
+                    <i class="bi bi-lightning-charge text-danger opacity-25" style="font-size: 8rem;"></i>
                     <h3 class="text-muted ms-3">Rattan Electricals</h3>
                 </div>
             </div>
@@ -37,19 +37,19 @@
         <div class="row text-center g-4">
             <div class="col-md-4">
                 <div class="d-flex align-items-center justify-content-center">
-                    <i class="bi bi-shield-check text-primary fs-1 me-3"></i>
+                    <i class="bi bi-shield-check text-danger fs-1 me-3"></i>
                     <h5 class="mb-0 fw-bold">Original Havells Products</h5>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="d-flex align-items-center justify-content-center border-md-start border-md-end">
-                    <i class="bi bi-truck text-primary fs-1 me-3"></i>
+                    <i class="bi bi-truck text-danger fs-1 me-3"></i>
                     <h5 class="mb-0 fw-bold">Direct Company Supply</h5>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="d-flex align-items-center justify-content-center">
-                    <i class="bi bi-people-fill text-primary fs-1 me-3"></i>
+                    <i class="bi bi-people-fill text-danger fs-1 me-3"></i>
                     <h5 class="mb-0 fw-bold">Trusted by 90+ Customers</h5>
                 </div>
             </div>
@@ -70,8 +70,8 @@
                     <a href="/categories#<%= category.id %>" class="text-decoration-none">
                         <div class="card h-100 border-0 shadow-sm hover-shadow transition">
                             <!-- Placeholder image colored box -->
-                            <div class="bg-primary bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="bi bi-plug text-primary fs-1"></i>
+                            <div class="bg-danger bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <i class="bi bi-plug text-danger fs-1"></i>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title fw-bold text-dark"><%= category.name %></h5>
@@ -112,14 +112,14 @@
 </section>
 
 <!-- Call to Action Section -->
-<section class="py-5 bg-primary text-white text-center">
+<section class="py-5 bg-danger text-white text-center">
     <div class="container py-4">
         <h2 class="fw-bold mb-4">Ready to Order or Need a Quote?</h2>
         <p class="lead mb-4 max-w-700 mx-auto">Contact Rattan Electricals today for the best prices on Havells electrical materials for your home, office, or project.</p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
             <a href="tel:<%= businessInfo.phone %>" class="btn btn-warning btn-lg fw-bold px-4 shadow"><i class="bi bi-telephone-fill me-2"></i> Call Now</a>
             <a href="/contact" class="btn btn-outline-light btn-lg fw-bold px-4">Get Quote</a>
-            <a href="/contact" class="btn btn-light btn-lg fw-bold px-4 text-primary"><i class="bi bi-geo-alt-fill me-2"></i> Visit Store</a>
+            <a href="/contact" class="btn btn-light btn-lg fw-bold px-4 text-danger"><i class="bi bi-geo-alt-fill me-2"></i> Visit Store</a>
         </div>
     </div>
 </section>

@@ -2,7 +2,7 @@
 <%- include('../layouts/navbar') %>
 
 <!-- Page Header -->
-<header class="bg-primary text-white py-5">
+<header class="bg-danger text-white py-5">
     <div class="container text-center">
         <h1 class="display-5 fw-bold">Product Categories</h1>
         <p class="lead">Explore our extensive range of Havells electrical supplies.</p>
@@ -17,9 +17,9 @@
                 <div class="col-md-6 col-lg-4" id="<%= category.id %>">
                     <div class="card h-100 border-0 shadow-sm hover-shadow transition">
                         <!-- Image Placeholder -->
-                        <div class="bg-primary bg-opacity-10 d-flex align-items-center justify-content-center border-bottom" style="height: 250px;">
-                            <i class="bi bi-box text-primary fs-1"></i>
-                            <span class="text-primary ms-2 fs-5 fw-bold"><%= category.name %></span>
+                        <div class="bg-danger bg-opacity-10 d-flex align-items-center justify-content-center border-bottom" style="height: 250px;">
+                            <i class="bi bi-box text-danger fs-1"></i>
+                            <span class="text-danger ms-2 fs-5 fw-bold"><%= category.name %></span>
                         </div>
                         <div class="card-body">
                             <h4 class="card-title fw-bold text-dark mb-3"><%= category.name %></h4>
