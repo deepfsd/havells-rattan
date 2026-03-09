@@ -17,7 +17,8 @@ router.get('/', (req, res) => {
         description: "Authorized Havells Distributor in Rewari. Direct company supply of genuine switches, wires, MCB, LED lights. Call 09899915202.",
         businessInfo,
         categories: data.categories,
-        products: data.products.slice(0, 4) // Show some featured products
+        products: data.products.slice(0, 4), // Show some featured products
+        isPageActive: true // Toggle for Home Page
     });
 });
 
@@ -26,17 +27,19 @@ router.get('/about', (req, res) => {
     res.render('pages/about', {
         title: "About Us | Rattan Electricals Rewari",
         description: "Learn more about Rattan Electricals, your trusted Havells distributor in Rewari since years. Top-rated customer service.",
-        businessInfo
+        businessInfo: businessInfo,
+        isPageActive: false // Currently under maintenance
     });
 });
 
 // Categories Page
 router.get('/categories', (req, res) => {
     res.render('pages/categories', {
-        title: "Product Categories | Havells Distributor Rewari",
-        description: "Browse our extensive range of Havells electrical products including switches, wires, lighting, and MCBs.",
-        businessInfo,
-        categories: data.categories
+        title: "Product Categories | Rattan Electricals Rewari",
+        description: "Explore our extensive range of Havells electrical supplies.",
+        businessInfo: businessInfo,
+        categories: data.categories, 
+        isPageActive: false // Currently under maintenance
     });
 });
 
@@ -46,7 +49,8 @@ router.get('/products', (req, res) => {
         title: "All Products | Havells Distributor Rewari",
         description: "View our full catalog of original Havells electrical supplies available in Rewari.",
         businessInfo,
-        products: data.products
+        products: data.products,
+        isPageActive: false // Toggle for Products Page
     });
 });
 
@@ -59,7 +63,8 @@ router.get('/products/:slug', (req, res) => {
         title: `${product.name} | Rattan Electricals`,
         description: product.description,
         businessInfo,
-        product
+        product,
+        isPageActive: true // Toggle for Single Product Page
     });
 });
 
@@ -68,7 +73,8 @@ router.get('/contact', (req, res) => {
     res.render('pages/contact', {
         title: "Contact Us | Rattan Electricals Rewari",
         description: "Get in touch with Rattan Electricals in Rewari for bulk orders and quotes on Havells electrical supplies.",
-        businessInfo
+        businessInfo,
+        isPageActive: false // Toggle for Contact Page
     });
 });
 

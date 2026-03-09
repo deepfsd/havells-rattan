@@ -1,51 +1,59 @@
 <%- include('../layouts/header') %>
 <%- include('../layouts/navbar') %>
 
-<!-- Page Header -->
-<header class="bg-danger text-white py-5">
-    <div class="container text-center">
-        <h1 class="display-5 fw-bold">About Us</h1>
-        <p class="lead">Your Trusted Havells Distributor in Rewari</p>
-    </div>
-</header>
+<% if (!isPageActive) { %>
+    <header class="bg-light text-dark py-5" style="min-height: 60vh; display: flex; align-items: center;">
+        <div class="container text-center">
+            <i class="bi bi-tools text-danger mb-3" style="font-size: 5rem;"></i>
+            <h1 class="display-5 fw-bold">Under Maintenance</h1>
+            <p class="lead text-muted">We are currently updating this page to serve you better.</p>
+            <p>Please check back soon!</p>
+            <a href="/" class="btn btn-outline-danger mt-3">Return to Home</a>
+        </div>
+    </header>
+<% } else { %>
+    <header class="bg-danger text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold">About Us</h1>
+            <p class="lead">Your Trusted Havells Distributor in Rewari</p>
+        </div>
+    </header>
 
-<!-- Main Content -->
-<section class="py-5 bg-white">
-    <div class="container py-4">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="fw-bold mb-4">Welcome to <%= businessInfo.name %></h2>
-                <p class="lead text-muted">We have been serving the Rewari community with top-quality electrical supplies for years.</p>
-                <p>As an authorized Havells distributor, we guarantee that every product you purchase from us is 100% genuine and comes directly from the company supply chain. Our commitment is to provide our customers with the best quality electrical materials at wholesale and competitive rates.</p>
-                <p>Whether you are a homeowner doing renovations, an electrician, or a large contractor, we have the stock and the expertise to fulfill your requirements.</p>
-                
-                <h4 class="fw-bold mt-4 mb-3">Why Choose Us?</h4>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Authorized Havells dealer</li>
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> 100% genuine products guaranteed</li>
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Competitive wholesale pricing</li>
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Friendly and knowledgeable staff</li>
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Excellent after-sales support</li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <!-- Placeholder Image -->
-                <div class="bg-light rounded p-4 shadow-sm text-center d-flex flex-column justify-content-center" style="height: 400px;">
-                    <i class="bi bi-shop text-danger opacity-25" style="font-size: 8rem;"></i>
-                    <h4 class="text-muted mt-3">Our Storefront</h4>
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Welcome to <%= businessInfo.name %></h2>
+                    <p class="lead text-muted">We have been serving the Rewari community with top-quality electrical supplies for years.</p>
+                    <p>As an authorized Havells distributor, we guarantee that every product you purchase from us is 100% genuine and comes directly from the company supply chain. Our commitment is to provide our customers with the best quality electrical materials at wholesale and competitive rates.</p>
+                    <p>Whether you are a homeowner doing renovations, an electrician, or a large contractor, we have the stock and the expertise to fulfill your requirements.</p>
+                    
+                    <h4 class="fw-bold mt-4 mb-3">Why Choose Us?</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Authorized Havells dealer</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> 100% genuine products guaranteed</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Competitive wholesale pricing</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Friendly and knowledgeable staff</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Excellent after-sales support</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light rounded p-4 shadow-sm text-center d-flex flex-column justify-content-center" style="height: 400px;">
+                        <i class="bi bi-shop text-danger opacity-25" style="font-size: 8rem;"></i>
+                        <h4 class="text-muted mt-3">Our Storefront</h4>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Call to Action -->
-<section class="py-5 bg-light text-center border-top">
-    <div class="container">
-        <h3 class="fw-bold mb-3">Visit our store today!</h3>
-        <p class="text-muted mb-4">Experience the quality of Havells products firsthand.</p>
-        <a href="/contact" class="btn btn-primary btn-lg fw-bold"><i class="bi bi-geo-alt-fill me-2"></i> Get Directions</a>
-    </div>
-</section>
+    <section class="py-5 bg-light text-center border-top">
+        <div class="container">
+            <h3 class="fw-bold mb-3">Visit our store today!</h3>
+            <p class="text-muted mb-4">Experience the quality of Havells products firsthand.</p>
+            <a href="/contact" class="btn btn-primary btn-lg fw-bold"><i class="bi bi-geo-alt-fill me-2"></i> Get Directions</a>
+        </div>
+    </section>
+<% } %>
 
 <%- include('../layouts/footer') %>
